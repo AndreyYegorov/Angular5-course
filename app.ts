@@ -41,7 +41,7 @@ class Book extends Article implements PublisherInterface {
         return this.title;
     }
 
-    getPublisher() {
+    getPublisher(): string {
         console.log(this.publisher);
 
         return this.publisher;
@@ -66,7 +66,7 @@ class Magazine extends Article implements AgencyInterface {
         return this.title;
     }
 
-    getAgency() {
+    getAgency(): string {
         console.log(this.agency);
 
         return this.agency;
