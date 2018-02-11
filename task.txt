@@ -1,0 +1,53 @@
+ООП задание
+
+1) Создать абстрактный класс *Article* у которого есть:
+    - свойство `createdAt` - дата создания
+    - публичный метод `getCreatedDate()` - возвращает дату создания
+    - публичный метод `getAuthor()` - возвращает имя автора
+    - абстрактный метод `getTitle()` - возвращает название.
+  Свойство `createdAt` должно автоматически устанавливатся при созданнии экземпляра класса.
+
+2) Создать 2 класса *Book* & *Magazine* которые наследуются от *Article*.
+    в классе *Book* реализовать метод `getPublisher()` - который вернет имя паблишера
+        - метод `getPublisher` описать через интерфейс
+    в классе *Magazine* реализовать метод `getAgency()` - который вернет имя агенства
+        - метод `getAgency` описать через интерфейс
+
+Создать интерфейсы *BookModel* & *MagazineModel*.
+Все свойства и методы должны быть типизированными.
+
+```bookData    = {title: "Awesome Book", author: "Will Smith", publisher: 'NY Times'};
+magazineData = {title: "Great Article", author: "John Trump", agency: 'INC co'};
+
+const book = new Book(bookData);
+book.getPublisher();
+book.getCreatedDate();
+book.getAuthor();
+book.getTitle();
+
+const magazine = new Magazine(magazineData);
+magazine.getAgency();
+magazine.getCreatedDate();
+magazine.getAuthor();
+magazine.getTitle();
+```
+
+
+3) создать класс Store, который имеет след. методы:
+    - add() добавить элемент
+    - remove() удалить элемент
+    - first() показать 1-й эллемент
+    - last() показать последний элемент
+    - each(cb) применить ф-цию ко всем элементам
+
+* доп задание - создать Store для хранения книг (экземпляров Book) и проверить все методы (add, remove etc) для коллекции из книг.
+* const storeBook = new Store([new Book(bookData), new Book(bookData)])
+
+const store = new Store([1,2,3,4,5,6,7,8]);
+
+store.first();
+store.last();
+store.each((item) => console.log(item)); (edited)
+https://www.typescriptlang.org/docs/handbook/basic-types.html
+http://typescript-lang.ru/docs/Basic%20Types.html
+https://habrahabr.ru/company/ruvds/blog/344502/

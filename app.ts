@@ -1,131 +1,146 @@
-// import {KeyStore} from './models';
+import {BookModel, MagazineModel, AgencyInterface, PublisherInterface} from './interfaces';
 
+abstract class Article {
+    private createdAt: Date;
+    private author: string;
 
-// let some:string[] = [4];
-// let num : number = 3
-//
-// let myObj:{key:number, key2?:number} = {
-//     key: 1
-// }
+    constructor(author: string) {
+        this.createdAt = new Date();
+        this.author = author;
+    }
 
-// let x:[string, number] = ['tttt', 2];
-//
-// enum Notify{
-//     Success,
-//     Error,
-//     Info
-// }
-// console.log(Notify.Error)
-//
-// const type:Notify = Notify.Error;
-// switch (type){
-//     case Notify.Error: {
-//
-//     }
-//     case Notify.Success: {
-//
-//     }
-// }
-//
-// let anyVar: any = {};
-//
-// function myFun(test:string):void {
-//     console.log(1);
-//
-//     // return ''
-// }
-//
-// myFun('asd');
-//
-// interface KeyStore {
-//     key: number;
-//     key2?: number;
-// }
-//
-/*let myObj:KeyStore = {
-    key: 222,
-    key2: 111
-};*/
+    getCreatedDate(): Date {
+        console.log(this.createdAt);
 
-// console.log(myObj)
-//
-// function getKeyStore():KeyStore{
-//     return myObj
-// }
-/*
+        return this.createdAt;
+    }
 
+    getAuthor(): string {
+        console.log(this.author);
 
-interface ClockInterface {
-    currentTime: Date;
-    setTime(d: Date);
-    getTime();
+        return this.author;
+    }
+
+    abstract getTitle(): string;
+}
+
+class Book extends Article implements PublisherInterface {
+    private publisher: string;
+    private title: string;
+
+    constructor(data:BookModel) {
+        super(data.author);
+
+        this.publisher = data.publisher;
+        this.title = data.title;
+    }
+
+    getTitle(): string {
+        console.log(this.title);
+
+        return this.title;
+    }
+
+    getPublisher() {
+        console.log(this.publisher);
+
+        return this.publisher;
+    }
 }
 
 
-class Clock implements ClockInterface{
-    currentTime: Date;
+class Magazine extends Article implements AgencyInterface {
+    private agency: string;
+    private title: string;
 
-    constructor(){
-        this.currentTime = new Date();
+    constructor(data:MagazineModel) {
+        super(data.author);
+
+        this.agency = data.agency;
+        this.title = data.title;
     }
 
-    setTime(){
+    getTitle(): string {
+        console.log(this.title);
 
+        return this.title;
     }
 
-    getTime(){
-        console.log(this.currentTime)
-    }
+    getAgency() {
+        console.log(this.agency);
 
-}
-
-class Car {
-    private name:string;
-
-    constructor(name:string) {
-        this.name = name;
-    }
-
-    public showName() {
-        console.log(this.name);
-    }
-
-}
-
-var  car = new Car("Some name");
-
-car.showName();
-
-class Toyouta extends Car {
-    private model:string
-    constructor(model:string) {
-        super('toyota')
-
-        this.model = model;
-    }
-    showModels(){
-        this.showName();
-        console.log(this.model)
+        return this.agency;
     }
 }
 
-const t = new Toyouta('raf4');
-t.showModels()*/
+class Store {
+    private storage: any[];
 
+    constructor(storage: any[]) {
+        this.storage = storage;
+    }
 
-/*
-abstract class Animal{
-    abstract makeSound():void;
-}
+    add(item: any): void {
+        this.storage.push(item);
+    }
 
-class Cat extends Animal{
-    makeSound(){
-        console.log('CAt says smng');
+    remove(item: any): void {
+        let index = this.storage.findIndex((value) => value === item);
+
+        this.storage.splice(index, 1);
+    }
+
+    first(): any {
+        let el = this.storage[0];
+
+        console.log(el);
+
+        return el;
+    }
+
+    last(): any {
+        let el = this.storage[this.storage.length - 1];
+
+        console.log(el);
+
+        return el;
+    }
+
+    each(cb): void {
+        this.storage.forEach(cb);
     }
 }
 
-class Dog extends Animal{
-    makeSound(){
+let bookData1    = {title: "Awesome Book", author: "Will Smith", publisher: 'NY Times'};
+let bookData2    = {title: "The Dark Tower", author: "Stephen King", publisher: 'They never sleep'};
+let bookData3    = {title: "Neuromancer", author: "William Gibson", publisher: 'NoName'};
+let magazineData = {title: "Great Article", author: "John Trump", agency: 'INC co'};
 
-    }
-}*/
+const book1 = new Book(bookData1);
+const book2 = new Book(bookData2);
+const book3 = new Book(bookData3);
+
+book2.getPublisher();
+book2.getCreatedDate();
+book2.getAuthor();
+book2.getTitle();
+
+const magazine = new Magazine(magazineData);
+
+magazine.getAgency();
+magazine.getCreatedDate();
+magazine.getAuthor();
+magazine.getTitle();
+
+const store = new Store([book1]);
+
+store.add(book2);
+store.add(book3);
+store.remove(book2);
+store.first();
+store.last();
+store.each(function (el) {
+    console.log(el.title.toUpperCase());
+});
+
+console.log(store);
