@@ -113,4 +113,5 @@ store.each(function (el) {
     console.log(el.title.toUpperCase());
 });
 console.log(store);
+store.first();
 //# sourceMappingURL=app.js.map

@@ -73,8 +73,8 @@ class Magazine extends Article implements AgencyInterface {
     }
 }
 
-class Store {
-    private storage: any[];
+class Store<T> {
+    private storage: T[];
 
     constructor(storage: any[]) {
         this.storage = storage;
@@ -90,7 +90,7 @@ class Store {
         this.storage.splice(index, 1);
     }
 
-    first(): any {
+    first(): T {
         let el = this.storage[0];
 
         console.log(el);
@@ -132,7 +132,7 @@ magazine.getCreatedDate();
 magazine.getAuthor();
 magazine.getTitle();
 
-const store = new Store([book1]);
+const store = new Store<Book>([book1]);
 
 store.add(book2);
 store.add(book3);
@@ -144,3 +144,5 @@ store.each(function (el) {
 });
 
 console.log(store);
+
+store.first();
