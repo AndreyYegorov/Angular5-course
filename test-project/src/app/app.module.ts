@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CourseListComponent } from './components/course-list/course-list.component';
+import { CourseItemComponent } from './components/course-item/course-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
     HeaderComponent,
-    CourseListComponent
+    CourseListComponent,
+    CourseItemComponent
   ],
   imports: [
     BrowserModule
