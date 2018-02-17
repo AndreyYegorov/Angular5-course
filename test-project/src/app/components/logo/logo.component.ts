@@ -21,6 +21,7 @@ export class LogoComponent implements OnInit, OnChanges {
   @Input() hide: boolean;
   @Input() dynTitle: string;
   @Output() buttonClicked = new EventEmitter();
+
   title: string = "hi there!";
 
   hadleClick(): void {

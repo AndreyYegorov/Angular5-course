@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin: 0 20px 0 0;
+}
+
+.header-heading {
+  color: darkolivegreen;
+}
