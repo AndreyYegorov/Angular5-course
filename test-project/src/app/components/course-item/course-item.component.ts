@@ -1,4 +1,4 @@
-import {Component, Input, ViewEncapsulation} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
 import {CourseModel} from '../../interfaces/interfaces';
 
 @Component({
@@ -9,4 +9,13 @@ import {CourseModel} from '../../interfaces/interfaces';
 })
 export class CourseItemComponent {
   @Input() course: CourseModel;
+  @Output() titleClicked = new EventEmitter();
+
+  handleTitle(): void {
+    this.titleClicked.emit(this.course.title);
+  }
+
+  changeRating(): void {
+    this.course.topRated = this.course.topRated ? false : true;
+  }
 }

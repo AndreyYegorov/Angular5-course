@@ -1,3 +1,3 @@
-<h2 class="course-item-heading">{{course.title}}</h2>
+<h2 class="course-item-heading" (click)="handleTitle()">{{course.title}}</h2>
 <p class="course-item-desc">{{course.description}}</p>
-<button class="course-item-button">{{course.topRated}}</button>
+<button class="course-item-button" (click)="changeRating()">{{course.topRated}}</button>
