@@ -4,7 +4,7 @@ import {CourseModel} from '../../interfaces/interfaces';
 @Component({
   selector: 'app-course-item',
   templateUrl: './course-item.component.html',
-  encapsulation: ViewEncapsulation.None,
+  // encapsulation: ViewEncapsulation.None,
   styleUrls: ['./course-item.component.css']
 })
 export class CourseItemComponent {
