@@ -1,4 +1,4 @@
-.logo {
+:host(.logo) {
   display: inline-block;
   vertical-align: middle;
 }

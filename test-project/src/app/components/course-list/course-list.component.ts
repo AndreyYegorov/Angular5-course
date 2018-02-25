@@ -1,10 +1,9 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component} from '@angular/core';
 import {CourseModel} from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-course-list',
   templateUrl: './course-list.component.html',
-  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent {
