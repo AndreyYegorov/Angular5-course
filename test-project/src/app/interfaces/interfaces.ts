@@ -4,5 +4,5 @@ export interface CourseModel {
   title: string,
   description: string,
   duration: number,
-  createdAt: Date
+  createdAt: number
 }

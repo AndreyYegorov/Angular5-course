@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 import { HighlightDirective } from './directives/highlight.directive';
+import { ColorizeByDateDirective } from './directives/colorize-by-date.directive';
 
 import { AppComponent } from './app.component';
 import { LogoComponent } from './components/logo/logo.component';
@@ -14,7 +15,10 @@ import { CourseItemComponent } from './components/course-item/course-item.compon
 @NgModule({
   declarations: [
     CapitalizePipe,
+
     HighlightDirective,
+    ColorizeByDateDirective,
+
     AppComponent,
     LogoComponent,
     HeaderComponent,

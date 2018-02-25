@@ -14,21 +14,21 @@ export class CourseListComponent {
       title: 'Course 1',
       description: 'Some text for course 1',
       duration: 360000,
-      createdAt: new Date()
+      createdAt: 1518213600000
     },{
       id: 2,
       topRated: true,
       title: 'Course 2',
       description: 'Some text for course 2',
       duration: 18000,
-      createdAt: new Date()
+      createdAt: 1517349600000
     },{
       id: 3,
       topRated: false,
       title: 'Course 3',
       description: 'Some text for course 3',
       duration: 520000,
-      createdAt: new Date()
+      createdAt: 1519585204431
     }
   ];
 

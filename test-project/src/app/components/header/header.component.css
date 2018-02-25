@@ -1,13 +1,13 @@
-:host(.header) {
+:host {
   display: block;
   margin: 0 0 20px;
-  padding: 20px;
-  background-color: azure;
 }
 
-.header__inner {
+.header {
   display: flex;
+  padding: 20px;
   align-items: center;
+  background-color: azure;
 }
 
 .header__logo {

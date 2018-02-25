@@ -1,3 +1,5 @@
-<h2 class="course-item__heading" (click)="handleTitle()">{{course.title | appCapitalize: 2}}</h2>
-<p class="course-item__desc">{{course.description}}</p>
-<button class="course-item__rating" [ngClass]="{'course-item__rating--active': course.topRated}" (click)="changeRating()">{{course.topRated}}</button>
+<div [appColorizeByDate]="createDateDiff" class="course-item">
+  <h2 class="course-item__heading" (click)="handleTitle()">{{course.title | appCapitalize: 2}}</h2>
+  <p class="course-item__desc">{{course.description}}</p>
+  <button class="course-item__rating" [ngClass]="{'course-item__rating--active': course.topRated}" (click)="changeRating()">{{course.topRated}}</button>
+</div>
