@@ -3,10 +3,10 @@
   align-items: center;
 }
 
-.header-logo {
+.header__logo {
   margin: 0 20px 0 0;
 }
 
-.header-heading {
+.header__heading {
   color: darkolivegreen;
 }
