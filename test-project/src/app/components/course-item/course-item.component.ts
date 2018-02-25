@@ -1,10 +1,9 @@
-import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {CourseModel} from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-course-item',
   templateUrl: './course-item.component.html',
-  // encapsulation: ViewEncapsulation.None,
   styleUrls: ['./course-item.component.css']
 })
 export class CourseItemComponent {
@@ -16,6 +15,6 @@ export class CourseItemComponent {
   }
 
   changeRating(): void {
-    this.course.topRated = this.course.topRated ? false : true;
+    this.course.topRated = !this.course.topRated;
   }
 }

@@ -6,17 +6,17 @@
   background-color: #fff;
 }
 
-.course-item-heading {
+.course-item__heading {
   display: inline-block;
   margin: 0 0 10px;
   cursor: pointer;
 }
 
-.course-item-desc {
+.course-item__desc {
   font-size: 14px;
 }
 
-.course-item-rating {
+.course-item__rating {
   overflow: hidden;
   position: absolute;
   top: 50%;
@@ -32,10 +32,10 @@
   cursor: pointer;
 }
 
-.course-item-rating:focus {
+.course-item__rating:focus {
   outline: none;
 }
 
-.course-item-rating--active {
+.course-item__rating--active {
   background-color: darkorange;
 }
