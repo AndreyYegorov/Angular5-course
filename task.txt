@@ -1,52 +1,11 @@
-angular 5 [components]
+1) создать директиву *colorizeByDate* которая будет изменять фон course-item компоненты в зависимости от даты создания курса.
+условия:
+- дата создания меньше 7 дней - зеленый цвет
+- дата создания меньше 8-14 дней - оранжевый цвет
+- дата создания меньше 15-16+ дней - серый цвет
 
-https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/C05063571a3ed9fd286dd06b1bd1574a4/projects/D607339f7552c7851eb2707cd62f246cd/pages/8423361ef1a44827a20e25a4f39fb7d2/image/8423361ef1a44827a20e25a4f39fb7d2.png
-https://s3.amazonaws.com/assets.mockflow.com/app/wireframepro/company/C05063571a3ed9fd286dd06b1bd1574a4/projects/D607339f7552c7851eb2707cd62f246cd/pages/8423361ef1a44827a20e25a4f39fb7d2/image/8423361ef1a44827a20e25a4f39fb7d2.png
+2) создать пайп *duration* который будет форматировать длину курса в читабельный формат `(HH MM)`. Например: 12000 (с) -  3h 20min.
 
-Создать приложение которое будет отображать список курсов.
-1) создать компонент *<app-logo>* - в который поместить любую картинку в качестве логотипа
-2) создать компонент *<app-header>* - в котором будет логотип + название приложения
-3) создать компонент *<course-item>* который принимает и отображает данные для конкретного курса. Если у курса поле *topRated* true - раскрасить кружок в желтый цвет. Так же компонент должен реагировать на нажате по тайтлу - прокидывать данные (тайтл) на верх (паренту).
-4) создать компонент *<course-list>* котрый содержит в себе список всех курсов и отображает <course-item> в цикле. написать метод `getTitle()` - который выводит в консоль тайтл выбранного курса.
-5) отобразить *<app-header>* *<course-list>* на странице.
-
-* Создать интерфейс CourseModel.
-* Все свойства должны быть типизированны.
-
-** по нажатию на кружок - изменять поле topRated.
-
-courses = [
-    {
-        id: 1,
-        topRated: false,
-        title: 'Course 1',
-        description: 'Some text for course 1',
-        duration: 360000,
-        createdAt: 1518529264965
-    },{
-        id: 2,
-        topRated: true,
-        title: 'Course 2',
-        description: 'Some text for course 2',
-        duration: 18000,
-        createdAt: 1518529264965
-    },{
-        id: 3,
-        topRated: false,
-        title: 'Course 3',
-        description: 'Some text for course 3',
-        duration: 520000,
-        createdAt: 1518529264965
-    }
-]
-
-useful links:
-https://angular.io/guide/displaying-data
-https://angular.io/guide/template-syntax
-https://angular.io/guide/lifecycle-hooks
-https://angular.io/guide/component-interaction
-https://angular.io/guide/component-styles
-https://angular.io/guide/structural-directives
-
-- smart/dumb components
-https://drive.google.com/file/d/0B4HggIGTcQAkRVhzbXQ3cGNOWEk/view
+3) cоздать пайп *onlyTopRated* который будет фильтровать коллекцию курсов которые помечены как topRated.
+https://angular.io/guide/attribute-directives
+https://angular.io/guide/pipes
