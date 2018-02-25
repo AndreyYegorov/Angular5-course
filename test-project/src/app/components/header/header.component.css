@@ -1,4 +1,11 @@
 :host(.header) {
+  display: block;
+  margin: 0 0 20px;
+  padding: 20px;
+  background-color: azure;
+}
+
+.header__inner {
   display: flex;
   align-items: center;
 }

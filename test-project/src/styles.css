@@ -1,12 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-.l-header {
-  margin: 0 0 20px;
-  padding: 20px;
-  background-color: azure;
-}
-
-.l-main {
+.main {
   padding: 20px;
   background-color: cornsilk;
 }
