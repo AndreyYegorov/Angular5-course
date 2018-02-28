@@ -29,6 +29,13 @@ export class CourseListComponent {
       description: 'Some text for course 3',
       duration: 520000,
       createdAt: 1519585204431
+    },{
+      id: 4,
+      topRated: false,
+      title: 'Course 4',
+      description: 'Some text for course 4',
+      duration: 360000,
+      createdAt: 1519847719951
     }
   ];
 
