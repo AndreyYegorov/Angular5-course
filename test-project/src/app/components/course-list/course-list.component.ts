@@ -10,21 +10,21 @@ export class CourseListComponent {
   courses: CourseModel[] = [
     {
       id: 1,
-      topRated: false,
+      topRated: true,
       title: 'Course 1',
       description: 'Some text for course 1',
       duration: 360000,
       createdAt: 1518213600000
     },{
       id: 2,
-      topRated: true,
+      topRated: false,
       title: 'Course 2',
       description: 'Some text for course 2',
       duration: 18000,
       createdAt: 1517349600000
     },{
       id: 3,
-      topRated: false,
+      topRated: true,
       title: 'Course 3',
       description: 'Some text for course 3',
       duration: 520000,

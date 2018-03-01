@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { DurationPipe } from './pipes/duration.pipe';
+import { OnlyTopRatedPipe } from "./pipes/only-top-rated.pipe";
 
 import { HighlightDirective } from './directives/highlight.directive';
 import { ColorizeByDateDirective } from './directives/colorize-by-date.directive';
@@ -17,6 +18,7 @@ import { CourseItemComponent } from './components/course-item/course-item.compon
   declarations: [
     CapitalizePipe,
     DurationPipe,
+    OnlyTopRatedPipe,
 
     HighlightDirective,
     ColorizeByDateDirective,
