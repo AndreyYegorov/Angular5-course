@@ -1,4 +1,4 @@
-<div [appColorizeByDate]="createDateDiff" class="course-item">
+<div [appColorizeByDate]="course.createdAt" class="course-item">
   <h2 class="course-item__heading" (click)="handleTitle()">{{course.title | appCapitalize: 2}}</h2>
   <p class="course-item__desc">{{course.description}}</p>
   <p class="course-item__desc">{{course.duration | appDuration: '(HH MM)'}}</p>
